@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val ktor_version: String by project
 val kodein_version: String by project
 val logback_version: String by project
+val exposed_version: String by project
 
 plugins {
     kotlin("jvm") version "1.3.72"
@@ -30,6 +31,14 @@ dependencies {
 
     implementation("io.netty:netty-transport-native-epoll:4.1.44.Final")
     implementation("io.netty:netty-tcnative:2.0.31.Final")
+
+    implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-java-time:$exposed_version")
+    implementation("com.zaxxer:HikariCP:3.4.5")
+    implementation("org.postgresql:postgresql:42.2.14")
+    implementation("org.liquibase:liquibase-core:4.0.0")
 }
 
 tasks.withType(KotlinCompile::class).all {

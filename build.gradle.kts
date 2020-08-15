@@ -26,8 +26,7 @@ dependencies {
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
 
-    implementation("org.kodein.di:kodein-di-generic-jvm:$kodein_version")
-    implementation("org.kodein.di:kodein-di-framework-ktor-server-jvm:$kodein_version")
+    implementation("org.kodein.di:kodein-di-framework-ktor-server-controller-jvm:$kodein_version")
 
     implementation("io.netty:netty-transport-native-epoll:4.1.44.Final")
     implementation("io.netty:netty-tcnative:2.0.31.Final")
